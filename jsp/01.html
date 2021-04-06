@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get 방식 </title>
+</head>
+<body>
+<fieldset>
+    <form method="GET" action="01.jsp">
+
+        <h3>개인 정보 입력</h3>
+        <p>ID : <input type="text" name="id" value=""></p> 
+        <p></p>
+
+        <p>생년월일 : <input type="date" name="birth"></p>
+        <p></p>
+
+        <p>성별 : <input type="radio" name="sex" value="Male" checked>남자
+        <input type="radio" name="sex" value="Female">여자</p>
+        <p></p>
+
+        <p>E-mail : <input type="email" name="email" value=""></p>
+        <p></p>
+
+        <p>메일 수신 : <input type="radio" name="agree" value="on" checked>동의
+        <input type="radio" name="agree" value="off" >거부</p>
+        <p></p>
+
+        휴대폰 : <select name="num1">
+            <option value="1">010</option>
+            <option value="2">011</option>
+            <option value="3">019</option> </select> -
+        <input type="text" name="num2" value=""> -
+        <input type="text" name="num3" value="">
+        <p></p>
+
+    <input type="submit" value="전송">
+    <input type="reset" value="다시작성">
+    
+    </form>
+</fieldset>
+</body>
+</html>
