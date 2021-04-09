@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+
+    <style>
+      *{font-family: 'Jua', sans-serif;}
+
+    a.deco1:link{
+      text-decoration: none;
+    }
+    a.deco1:visited{
+      color: black;
+    }
+    .fontsty{
+      font-family: 'Do Hyeon', sans-serif;width="30" height="24"
+    }
+    </style>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="./img/food.png" alt="" width="30" height="24">
+          돈까스
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">소개</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">메인메뉴</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">사이드</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                오시는 길
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">지하철</a></li>
+                <li><a class="dropdown-item" href="#">버스</a></li>
+                <li><a class="dropdown-item" href="#">승용차</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <p style="margin-top: 100px;"></p>
+    <h1 class="fontsty" style="text-align: center;">돈까스</h1>
+    <p style="margin-top: 20px;"></p>
+    <center>
+    <div class="container">
+      <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel" style="width: 70%;">
+        <ol class="carousel-indicators">
+          <li data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"></li>
+          <li data-bs-target="#carouselExampleDark" data-bs-slide-to="1"></li>
+          <li data-bs-target="#carouselExampleDark" data-bs-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img src="img/pork1.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <a href="content01.html">
+              <h5><a class="deco1" href="content01.html">BEST 1</a></h5>
+              <p style="font-size: large;">왕돈까스</p>
+            </a></div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="img/pork2.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5><a class="deco1" href="content01.html">BEST 2</a></h5>
+              <p style="font-size: large;">스노우 샐러드 돈까스</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/pork3.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5><a class="deco1" href="content01.html">BEST 3</a></h5>
+              <p style="font-size: large;">더블 치즈 돈까스</p>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleDark" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleDark" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </a>
+      </div>
+    </center>
+      <!-- 카드그룹 -->
+      <p style="margin-top: 50px;"></p>
+
+    <div class="container">
+      <div class="card-group">
+        <div class="card">
+          <img style="height: 50%;" src="./img/pork1.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">왕돈까스</h5>
+            <p class="card-text">핵인싸를 위한 그 메뉴!<br>홍익왕돈까스 도장깨기~</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">스노우 샐러드 돈까스</h5>
+            <p class="card-text">계절 야채의 싱싱한 향기와 아삭한 식감을 즐길 수 있는 스노우 샐러드 돈까스</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+          <img style="height: 50%;" src="./img/pork2.jpg" class="card-img-top" alt="...">
+          
+        </div>
+        <div class="card">
+          <img img style="height: 50%;" src="./img/pork3.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">더블 치즈 돈까스</h5>
+            <p class="card-text">비주얼만큼이나 맛있다! 스노우 철판 돈까스</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
