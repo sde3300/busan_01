@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <style> 
+    .container { width:600px; margin:0 auto; }
+    ul {list-style-type: none;}
+    label.title {
+        font-weight: bold;
+        width: 80px;
+        float: left;
+    }
+    div.centered {text-align: center;}
+    fieldset {
+        margin: 15px 10px;
+    }
+    fieldset legend {
+        font-weight: bold;
+        font-size: 18px;
+        color: black;
+    }
+    ul li {margin-bottom: 10px;}
+    </style>
+
+<title>주문서</title>
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align: center;">상품 주문서</h1>
+        <form>
+            <fieldset>
+                <legend>개인 정보</legend>
+                <ul>
+                    <li>
+                        <label for="uname" class="title">이름</label>
+                        <input type="text" id="uname" placeholder="여백없이 입력" required>
+                    </li>
+                    <li>
+                        <label for="tel1" class="title">연락처</label>
+                        <input type="tel" id="tel1" placeholder="연락가능한 번호">
+                    </li>
+                </ul>
+            </fieldset>
+
+            <fieldset>
+                <legend>배송지 정보</legend>
+                <ul>
+                    <li>
+                        <label for="addr" class="title">주소</label>
+                        <input type="text" size="40" id="addr" required>
+                    </li>
+                    <li>
+                        <label for="tel2" class="title">전화번호</label>
+                        <input type="tel" id="tel2" required>
+                    </li>
+                    <li>
+                        <label for="comment" class="title">메 모</label>
+                        <textarea cols="40" rows="3" id="comment"></textarea>
+                    </li>
+                </ul>
+            </fieldset>
+
+            <fieldset>
+                <legend>주문 정보</legend>
+                <ul>
+                    <li>
+                        <img src="./img/bed01-1.jpg" width="30%"><br>
+                        <label><input type="checkbox">벤스 폴센 패브릭 퀸 침대(navy, 라텍스)</input></label>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>수량</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            </select></td>
+                    </li>
+                </ul>
+            </fieldset>
+
+            
+            <div class="centered">
+                <button type="button" class="btn btn-sm btn-outline-secondary" onclick="location.href='./order_ok.html'">구입하기</button>
+                <input type="reset" value="다시작성">
+                <button type="button" class="btn btn-sm btn-outline-secondary" onclick="location.href='./main.html'">홈으로</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
