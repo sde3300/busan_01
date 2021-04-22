@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>게시판</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <style> 
+    /* 게시판 리스트 목록 */
+.sub_news,.sub_news th,.sub_news td{border:0}
+.sub_news a{color:#383838;text-decoration:none}
+.sub_news{width:100%;border-bottom:1px solid #999;color:#666;font-size:12px;table-layout:fixed}
+.sub_news caption{display:none}
+.sub_news th{padding:5px 0 6px;border-top:solid 1px #999;border-bottom:solid 1px #b2b2b2;background-color:#f1f1f4;color:#333;font-weight:bold;line-height:20px;vertical-align:top}
+.sub_news td{padding:8px 0 9px;border-bottom:solid 1px #d2d2d2;text-align:center;line-height:18px;}
+.sub_news .date,.sub_news .hit{padding:0;font-family:Tahoma;font-size:11px;line-height:normal}
+.sub_news .title{text-align:left; padding-left:15px; font-size:13px;}
+.sub_news .title .pic,.sub_news .title .new{margin:0 0 2px;vertical-align:middle}
+.sub_news .title a.comment{padding:0;background:none;color:#f00;font-size:12px;font-weight:bold}
+.sub_news tr.reply .title a{padding-left:16px;background:url(첨부파일/ic_reply.png) 0 1px no-repeat}
+/* //게시판 리스트 목록 */
+
+/* Pagination 가운데정렬 */
+.pagination { font-family: "Roboto", sans-serif; }
+.pagination li a { border-radius:0 !important; color:#333 !important; }
+.pagination li.active a { color:#fff !important; background:#444 !important; border-color:#444 !important; }
+
+
+/* 푸터 */
+@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+
+
+
+.container-fluid {
+    overflow: hidden;
+    background: #262626;
+    color: #627482 !important;
+    margin-bottom: 0;
+    padding-bottom: 0
+}
+
+small {
+    font-size: calc(12px + (15 - 12) * ((100vw - 360px) / (1600 - 360))) !important
+}
+
+.bold-text {
+    color: #989c9e !important
+}
+
+.mt-55 {
+    margin-top: calc(50px + (60 - 50) * ((100vw - 360px) / (1600 - 360))) !important
+}
+
+h3 {
+    font-size: calc(34px + (40 - 34) * ((100vw - 360px) / (1600 - 360))) !important
+}
+
+.social {
+    font-size: 21px !important
+}
+
+.rights {
+    font-size: calc(10px + (12 - 10) * ((100vw - 360px) / (1600 - 360))) !important
+}
+
+</style>
+
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+              <div class="container-fluid">
+                <a class="navbar-brand" href="/practice02/board.html">게시판</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                  <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="/practice02/board.html">Talk Talk</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/practice02/board3.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/practice02/board2.html">글쓰기</a>
+                      </li>
+                  </ul>
+                  <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                  </form>
+                </div>
+              </div>
+            </nav>
+          </header>
+    <div class="container-sm">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <!-- 리스트 게시판 시작-->
+        <div class="album py-3 bg-light">
+<h1><strong>Talk Talk</strong></h1>
+<table class="sub_news" border="1" cellspacing="0" summary="게시판의 글제목 리스트">
+    <caption>게시판 리스트</caption>
+    <colgroup>
+    <col>
+    <col width="110">
+    <col width="100">
+    <col width="80">
+    </colgroup>
+    <thead>
+    <tr>
+    <th scope="col">제목</th>
+    <th scope="col">글쓴이</th>
+    <th scope="col">날짜</th>
+    <th scope="col">조회수</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td class="title">
+    <a href="./board4.html">안녕하세요</a>
+    <img width="13" height="12" class="pic" alt="첨부이미지" src="/practice02/img/ic_pic.gif"> <a class="comment" href="#">[2]</a> <img width="10" height="9" class="new" alt="새글" src="/practice02/img/ic_new.gif">
+    </td>
+    <td class="name">심다은</td>
+    <td class="date">2021/04/19</td>
+    <td class="hit">123</td>
+    </tr>
+    <tr class="reply">
+    <td class="title" style="padding-left:30px;">
+    <img width="10" height="9" class="new" alt="새글" src="/practice02/img/ic_reply.png">
+    <a href="#">안녕하세요 답글</a>
+    </td>
+    <td class="name">부산직업전문학교</td>
+    <td class="date">2021/04/20</td>
+    <td class="hit">111</td>
+    </tr>
+    <tr>
+    <td class="title">
+    <a href="#">게시판 제목이 들어갑니다</a>
+    </td>
+    <td class="name">글쓴이이름</td>
+    <td class="date">2021.04.19</td>
+    <td class="hit">89</td>
+    </tr>
+    <tr>
+    <td class="title">
+    <a href="#">게시판 제목이 들어갑니다</a>
+    </td>
+    <td class="name">글쓴이이름</td>
+    <td class="date">2021.04.19</td>
+    <td class="hit">89</td>
+    </tr>
+    <tr>
+    <td class="title">
+    <a href="#">게시판 제목이 들어갑니다</a>
+    </td>
+    <td class="name">글쓴이이름</td>
+    <td class="date">2021.04.19</td>
+    <td class="hit">89</td>
+    </tr>
+    <tr>
+    <td class="title">
+    <a href="#">게시판 제목이 들어갑니다</a>
+    </td>
+    <td class="name">글쓴이이름</td>
+    <td class="date">2021.04.19</td>
+    <td class="hit">89</td>
+    </tr>
+    <tr>
+    <td class="title">
+    <a href="#">게시판 제목이 들어갑니다</a>
+    </td>
+    <td class="name">글쓴이이름</td>
+    <td class="date">2021.04.19</td>
+    <td class="hit">89</td>
+    </tr>
+    <tr>
+    <td class="title">
+    <a href="#">게시판 제목이 들어갑니다</a>
+    </td>
+    <td class="name">글쓴이이름</td>
+    <td class="date">2021.04.19</td>
+    <td class="hit">89</td>
+    </tr>
+    <tr>
+    <td class="title">
+    <a href="#">게시판 제목이 들어갑니다</a>
+    </td>
+    <td class="name">글쓴이이름</td>
+    <td class="date">2021.04.19</td>
+    <td class="hit">89</td>
+    </tr>
+    <tr>
+    <td class="title">
+    <a href="#">게시판 제목이 들어갑니다</a>
+    </td>
+    <td class="name">글쓴이이름</td>
+    <td class="date">2021.04.19</td>
+    <td class="hit">89</td>
+    </tr>
+    <tr>
+    <td class="title">
+    <a href="#">게시판 제목이 들어갑니다</a>
+    </td>
+    <td class="name">글쓴이이름</td>
+    <td class="date">2021.04.19</td>
+    <td class="hit">89</td>
+    </tr>
+    <tr>
+    <td class="title">
+    <a href="#">게시판 제목이 들어갑니다</a>
+    </td>
+    <td class="name">글쓴이이름</td>
+    <td class="date">2021.04.19</td>
+    <td class="hit">89</td>
+    </tr>
+    <tr>
+    <td class="title">
+    <a href="#">게시판 제목이 들어갑니다</a>
+    </td>
+    <td class="name">글쓴이이름</td>
+    <td class="date">2021.04.19</td>
+    <td class="hit">89</td>
+    </tr>
+    <tr>
+    <td class="title">
+    <a href="#">게시판 제목이 들어갑니다</a>
+    </td>
+    <td class="name">글쓴이이름</td>
+    <td class="date">2021.04.19</td>
+    <td class="hit">89</td>
+    </tr>
+        
+    
+    <!-- tr이 제목 1줄입니다 보일 list 갯수만큼 li반복합니다.-->
+    </tbody>
+    </table>
+    <!-- 리스트 게시판 끝-->
+    <br>
+    
+    <!-- Pagination -->
+        <ul class="pagination" style=justify-content:center>
+            
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">4</a></li>
+            <li class="page-item"><a class="page-link" href="#">5</a></li>
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+          </ul>
+        
+            <p><a class="btn btn-dark" href="/practice02/board2.html">글쓰기</a></div></p><br><br>
+            
+    
+</div>
+    <!-- 푸터 -->
+    <div class="container-fluid pb-0 mb-0 justify-content-center text-light ">
+      <footer>
+          <div class="row my-5 justify-content-center py-5">
+              <div class="col-11">
+                  <div class="row ">
+                      <div class="col-xl-8 col-md-4 col-sm-4 col-12 my-auto mx-auto a">
+                          <h3 class="text-muted mb-md-0 mb-5 bold-text">Pepper.</h3>
+                      </div>
+                      <div class="col-xl-2 col-md-4 col-sm-4 col-12">
+                          <h6 class="mb-3 mb-lg-4 bold-text "><b>MENU</b></h6>
+                          <ul class="list-unstyled">
+                              <li>Home</li>
+                              <li>About</li>
+                              <li>Blog</li>
+                              <li>Portfolio</li>
+                          </ul>
+                      </div>
+                      <div class="col-xl-2 col-md-4 col-sm-4 col-12">
+                          <h6 class="mb-3 mb-lg-4 text-muted bold-text mt-sm-0 mt-5"><b>ADDRESS</b></h6>
+                          <p class="mb-1">605, RATAN ICON BUILDING</p>
+                          <p>SEAWOODS SECTOR</p>
+                      </div>
+                  </div>
+                  <div class="row ">
+                      <div class="col-xl-8 col-md-4 col-sm-4 col-auto my-md-0 mt-5 order-sm-1 order-3 align-self-end">
+                          <p class="social text-muted mb-0 pb-0 bold-text"> <span class="mx-2"><i class="fa fa-facebook" aria-hidden="true"></i></span> <span class="mx-2"><i class="fa fa-linkedin-square" aria-hidden="true"></i></span> <span class="mx-2"><i class="fa fa-twitter" aria-hidden="true"></i></span> <span class="mx-2"><i class="fa fa-instagram" aria-hidden="true"></i></span> </p><small class="rights"><span>&#174;</span> Pepper All Rights Reserved.</small>
+                      </div>
+                      <div class="col-xl-2 col-md-4 col-sm-4 col-auto order-1 align-self-end ">
+                          <h6 class="mt-55 mt-2 text-muted bold-text"><b>ANIRUDH SINGLA</b></h6><small> <span><i class="fa fa-envelope" aria-hidden="true"></i></span> anirudh@gmail.com</small>
+                      </div>
+                      <div class="col-xl-2 col-md-4 col-sm-4 col-auto order-2 align-self-end mt-3 ">
+                          <h6 class="text-muted bold-text"><b>RISHABH SHEKHAR</b></h6><small><span><i class="fa fa-envelope" aria-hidden="true"></i></span> rishab@gmail.com</small>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </footer>
+  </div>
+  
+    </body>
+</html>

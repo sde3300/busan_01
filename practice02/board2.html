@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>게시글 입력</title>
+<meta name="viewport" content="width=device-width" , initial-scale="1">
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.css">
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+<style>
+	.row{border:0}
+.row a{color:#383838;text-decoration:none}
+.row {width:100%;border-bottom:1px solid #999;color:#666;font-size:12px;table-layout:fixed}
+.row caption{display:none}
+.row th{padding:5px 0 6px;border-top:solid 1px #999;border-bottom:solid 1px #b2b2b2;background-color:#f1f1f4;color:#333;font-weight:bold;line-height:20px;vertical-align:top}
+</style>
+</head>
+<body>
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+		  <div class="container-fluid">
+			<a class="navbar-brand" href="/practice02/board.html">게시판</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+			  <span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarCollapse">
+			  <ul class="navbar-nav me-auto mb-2 mb-md-0">
+				<li class="nav-item">
+				  <a class="nav-link active" aria-current="page" href="/practice02/board.html">Talk Talk</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="/practice02/board3.html">Gallery</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/practice02/board2.html">글쓰기</a>
+				  </li>
+			  </ul>
+			  <form class="d-flex">
+				<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+				<button class="btn btn-outline-success" type="submit">Search</button>
+			  </form>
+			</div>
+		  </div>
+		</nav>
+	  </header>
+<div class="container-sm">
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<div class="container">
+		<div class="row">
+				<table class="table table-striped"
+					style="text-align: center; border: 1px solid #dddddd">
+					<thead>
+						<tr>
+							<th colspan="2"
+								style="background-color: #eee; text-align: center;">글쓰기</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><input type="text" class="form-control"
+								placeholder="글 제목" name="bbsTitle" maxlength="50"></td>
+						</tr>
+						<tr>
+							<td><textarea rows="30" cols="150" type="text" class="form-control" placeholder="글 내용" name="bbsContent" maxlength="2048">
+                        </textarea></td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+		</div>
+		<br>
+		<a class="btn btn-dark" href="/practice02/board4.html">업로드</a>
+		<a class="btn btn-dark" href="/practice02/board.html">돌아가기</a>
+	</div>
+	
+</body>
+</html>
